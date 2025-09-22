@@ -1,0 +1,224 @@
+import React from "react";
+
+// Avodah Innovations - Single-file Starter React App
+// Tailwind CSS utility classes are used (no import required here in preview).
+// To run: create-react-app or Vite + Tailwind, paste into src/App.jsx and configure Tailwind.
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-white to-green-50 text-gray-900">
+      <header className="shadow-sm bg-white/70 backdrop-blur sticky top-0 z-50">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 rounded-full bg-green-700 text-white flex items-center justify-center font-bold text-lg">A</div>
+            <div>
+              <h1 className="text-lg font-semibold">Avodah Innovations</h1>
+              <p className="text-xs text-gray-600">Bioeconomy • Avodah Park • Youth Empowerment</p>
+            </div>
+          </div>
+
+          <nav className="hidden md:flex gap-6 items-center text-sm">
+            <a href="#home" className="hover:text-green-700">Home</a>
+            <a href="#about" className="hover:text-green-700">About</a>
+            <a href="#domains" className="hover:text-green-700">Core Business</a>
+            <a href="#park" className="hover:text-green-700">Avodah Park</a>
+            <a href="#metatv" className="hover:text-green-700">MetaTV</a>
+            <a href="#contact" className="hover:text-green-700">Contact</a>
+          </nav>
+
+          <div className="hidden md:flex gap-3">
+            <a className="px-4 py-2 border rounded-md text-sm bg-green-700 text-white" href="#contact">Get Involved</a>
+          </div>
+
+          <button className="md:hidden">☰</button>
+        </div>
+      </header>
+
+      <main className="max-w-6xl mx-auto px-6 py-12">
+        <section id="home" className="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">Avodah Innovations</h2>
+            <p className="mt-4 text-lg text-gray-700">Turning agro-waste, herbs & microbes into <span className="font-semibold">bioplastics</span>, <span className="font-semibold">enzymes</span>, <span className="font-semibold">diagnostics</span> & <span className="font-semibold">skills</span>. Empowering youth and transforming communities across Africa.</p>
+
+            <div className="mt-6 flex gap-4">
+              <a href="#domains" className="px-4 py-2 bg-green-700 text-white rounded-md">Our Core Business</a>
+              <a href="#park" className="px-4 py-2 border rounded-md">Avodah Park</a>
+            </div>
+
+            <div className="mt-8 grid grid-cols-2 gap-3">
+              <div className="p-4 rounded-lg bg-white/80">
+                <h4 className="font-semibold">Mission</h4>
+                <p className="text-sm text-gray-600">Reduce plastic pollution. Improve health. Add value to agro-residues. Create jobs.</p>
+              </div>
+              <div className="p-4 rounded-lg bg-white/80">
+                <h4 className="font-semibold">MetaTV</h4>
+                <p className="text-sm text-gray-600">Media arm for storytelling, training, and investor outreach.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="rounded-lg shadow-lg overflow-hidden bg-gradient-to-tr from-green-50 to-white p-8">
+            <div className="h-64 rounded-md bg-[url('https://images.unsplash.com/photo-1536305030010-1a0f99cfd9b4?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=')] bg-cover bg-center"></div>
+            <p className="mt-4 text-sm text-gray-600">Avodah Park: research, validation, production, training and promotion all under one roof — a unique ecosystem in East Africa.</p>
+          </div>
+        </section>
+
+        <section id="about" className="mt-16">
+          <h3 className="text-2xl font-bold">About Avodah Innovations</h3>
+          <p className="mt-3 text-gray-700">Avodah Innovations is a bioeconomy enterprise headquartered in Mbarara City, Uganda. We combine science, entrepreneurship and community grounded in faith and integrity to transform lives and empower youth.</p>
+
+          <div className="mt-6 grid md:grid-cols-3 gap-6">
+            <div className="p-4 bg-white rounded-lg shadow-sm">
+              <h4 className="font-semibold">Vision</h4>
+              <p className="text-sm text-gray-600">Drive Africa's transition toward a green, sustainable economy.</p>
+            </div>
+            <div className="p-4 bg-white rounded-lg shadow-sm">
+              <h4 className="font-semibold">Values</h4>
+              <p className="text-sm text-gray-600">Faith, integrity, excellence, community.</p>
+            </div>
+            <div className="p-4 bg-white rounded-lg shadow-sm">
+              <h4 className="font-semibold">Headquarters</h4>
+              <p className="text-sm text-gray-600">Mbarara City, Uganda</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="domains" className="mt-16">
+          <h3 className="text-2xl font-bold">Our Core Business</h3>
+          <p className="mt-2 text-gray-700">We work across five interconnected domains:</p>
+
+          <div className="mt-6 grid md:grid-cols-2 gap-6">
+            <Card title="Bioplastics & Polymers" children={
+              "Biodegradable alternatives from cassava starch, banana peels, sugarcane bagasse. Products: PHAs, pullulan, xanthan gum, eco-packaging."
+            } />
+
+            <Card title="Industrial Enzymes & Fermentation" children={
+              "Thermostable enzymes and fermentation products to improve animal feed, sustainable farming, and industrial processes."
+            } />
+
+            <Card title="Herbal-Based Innovations" children={
+              "Herbal supplements, functional foods, personal care and cosmetics from Moringa, Aloe vera, turmeric, neem."
+            } />
+
+            <Card title="Drug Discovery Solutions" children={
+              "AI-driven screening of microbes and plants for bioactive compounds — targeting AMR, cancer and metabolic disorders."
+            } />
+
+            <Card title="Rapid Diagnostics" children={
+              "LAMP & CRISPR point-of-care diagnostics for TB, AMR pathogens, malaria and more — affordable & locally manufactured."
+            } />
+          </div>
+        </section>
+
+        <section id="park" className="mt-16">
+          <h3 className="text-2xl font-bold">Avodah Park</h3>
+          <p className="mt-2 text-gray-700">A multi-functional ecosystem housing research labs, GLP animal house, GMP production lines, training spaces, and promotional media.</p>
+
+          <div className="mt-6 grid md:grid-cols-3 gap-6">
+            <Feature title="Research Labs" text="Microbiology, molecular biology, chemistry, hematology, IHC & pharma analysis." />
+            <Feature title="Validate" text="GLP-aligned animal house and biosafety testing." />
+            <Feature title="Produce" text="GMP-compliant lines for pharma, nutraceuticals, fermentation and bioplastics." />
+            <Feature title="Train" text="Classrooms, incubators, and mentorship for students and startups." />
+            <Feature title="Promote" text="MetaTV for marketing, training and investor outreach." />
+            <Feature title="Engage" text="Community spaces, wellness center, and events." />
+          </div>
+        </section>
+
+        <section id="metatv" className="mt-16">
+          <h3 className="text-2xl font-bold">MetaTV — Media & Community</h3>
+          <p className="mt-2 text-gray-700">MetaTV bridges science and society with video, stories, and campaigns that amplify innovators and attract investors.</p>
+
+          <div className="mt-6 grid md:grid-cols-2 gap-6">
+            <div className="p-4 bg-white rounded-lg shadow-sm">
+              <h4 className="font-semibold">Watch & Learn</h4>
+              <p className="text-sm text-gray-600">Feature stories, training modules, and live broadcasts.</p>
+            </div>
+            <div className="p-4 bg-white rounded-lg shadow-sm">
+              <h4 className="font-semibold">Join</h4>
+              <p className="text-sm text-gray-600">Opportunities for students, interns, and media trainees.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="partners" className="mt-16">
+          <h3 className="text-2xl font-bold">Partners & Customers</h3>
+          <p className="mt-2 text-gray-700">Manufacturers, farmers, hospitals, universities, NGOs and youth groups collaborate with Avodah.</p>
+
+          <div className="mt-6 flex flex-wrap gap-4">
+            <Logo name="Manufacturers" />
+            <Logo name="Farmers & Cooperatives" />
+            <Logo name="Hospitals & Universities" />
+            <Logo name="NGOs & Development Agencies" />
+          </div>
+        </section>
+
+        <section id="contact" className="mt-16 mb-20">
+          <h3 className="text-2xl font-bold">Contact & Get Involved</h3>
+          <p className="mt-2 text-gray-700">Interested in partnership, media, training or investment? Reach out to us.</p>
+
+          <div className="mt-6 grid md:grid-cols-2 gap-6">
+            <div className="p-6 bg-white rounded-lg shadow-sm">
+              <h4 className="font-semibold">Head Office</h4>
+              <p className="text-sm text-gray-600">Mbarara City, Uganda</p>
+              <p className="mt-2 text-sm">Email: info@avodahinnovations.org</p>
+            </div>
+
+            <form className="p-6 bg-white rounded-lg shadow-sm">
+              <label className="block text-sm font-medium">Name</label>
+              <input className="mt-1 p-2 border rounded w-full" placeholder="Your name" />
+
+              <label className="block text-sm font-medium mt-4">Email</label>
+              <input className="mt-1 p-2 border rounded w-full" placeholder="you@example.com" />
+
+              <label className="block text-sm font-medium mt-4">Message</label>
+              <textarea className="mt-1 p-2 border rounded w-full" rows={4} placeholder="How would you like to collaborate?" />
+
+              <div className="mt-4">
+                <button type="button" className="px-4 py-2 bg-green-700 text-white rounded">Send Message</button>
+                <span className="ml-3 text-xs text-gray-500">(Form not wired — add backend endpoint to process submissions)</span>
+              </div>
+            </form>
+          </div>
+        </section>
+
+      </main>
+
+      <footer className="bg-white/80 border-t">
+        <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-sm text-gray-600">© {new Date().getFullYear()} Avodah Innovations — Mbarara City, Uganda</div>
+          <div className="flex gap-4 text-sm">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Media Kit</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+
+function Card({ title, children }){
+  return (
+    <div className="p-6 bg-white rounded-lg shadow-sm">
+      <h4 className="font-semibold">{title}</h4>
+      <p className="mt-2 text-sm text-gray-600">{children}</p>
+    </div>
+  )
+}
+
+function Feature({ title, text }){
+  return (
+    <div className="p-4 bg-white rounded-lg shadow-sm">
+      <h4 className="font-semibold">{title}</h4>
+      <p className="text-sm text-gray-600 mt-1">{text}</p>
+    </div>
+  )
+}
+
+function Logo({ name }){
+  return (
+    <div className="px-4 py-2 bg-white/90 rounded shadow-sm text-sm">{name}</div>
+  )
+}
