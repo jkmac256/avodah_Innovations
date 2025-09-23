@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import logo from "../assets/images/logo.png";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,23 +18,35 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="shadow-sm bg-white/70 backdrop-blur sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-full bg-green-700 text-white flex items-center justify-center font-bold text-lg">A</div>
+    <header className="sticky top-0 z-50 w-full bg-white/70 backdrop-blur shadow-md">
+      <div className="w-full px-4 sm:px-6 lg:px-12 py-3 sm:py-4 flex items-center justify-between">
+        {/* Logo & Title */}
+        <div className="flex items-center gap-3 sm:gap-4">
+          <div className="w-12 h-12">
+              <img
+                src={logo} 
+                alt="Avodah Innovations Logo"
+                className="w-full h-full object-contain"
+              />
+            </div>
+
           <div>
-            <h1 className="text-lg font-semibold">Avodah Innovations</h1>
-            <p className="text-xs text-gray-600">Bioeconomy • Avodah Park • Youth Empowerment</p>
+            <h1 className="text-sm sm:text-base md:text-lg font-semibold">Avodah Innovations</h1>
+            <p className="text-[10px] sm:text-xs md:text-sm text-gray-600">
+              Bioeconomy • Avodah Park • Youth Empowerment
+            </p>
           </div>
         </div>
 
-        {/* Desktop nav */}
-        <nav className="hidden md:flex gap-6 items-center text-sm">
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex gap-4 lg:gap-6 items-center text-sm sm:text-base">
           {navItems.map((item) => (
             <Link
               key={item.name}
               to={item.path}
-              className={`hover:text-green-700 ${location.pathname === item.path ? "text-green-700 font-semibold" : ""}`}
+              className={`hover:text-green-700 transition-colors ${
+                location.pathname === item.path ? "text-green-700 font-semibold" : "text-gray-700"
+              }`}
             >
               {item.name}
             </Link>
@@ -41,36 +54,53 @@ export default function Navbar() {
         </nav>
 
         {/* Desktop CTA */}
-        <div className="hidden md:flex gap-3">
+        <div className="hidden md:flex">
           <Link
             to="/contact"
-            className="px-4 py-2 border rounded-md text-sm bg-green-700 text-white"
+            className="px-3 sm:px-4 py-1.5 sm:py-2 bg-green-700 text-white rounded-md text-sm sm:text-base hover:bg-green-800 transition"
           >
             Get Involved
           </Link>
         </div>
 
-        {/* Mobile menu toggle */}
-        <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+        {/* Mobile Menu Toggle */}
+        <button
+          className="md:hidden text-2xl sm:text-3xl"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
           ☰
         </button>
       </div>
 
-      {/* Mobile menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-white/90 backdrop-blur shadow-lg py-4 flex flex-col gap-3 px-6">
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden bg-white/90 backdrop-blur shadow-lg overflow-hidden transition-all duration-300 ${
+          menuOpen ? "max-h-screen py-4" : "max-h-0 py-0"
+        }`}
+      >
+        <nav className="flex flex-col gap-3 px-6">
           {navItems.map((item) => (
             <Link
               key={item.name}
               to={item.path}
               onClick={() => setMenuOpen(false)}
-              className={`text-left hover:text-green-700 ${location.pathname === item.path ? "text-green-700 font-semibold" : ""}`}
+              className={`text-left text-gray-700 sm:text-base py-1.5 hover:text-green-700 transition ${
+                location.pathname === item.path ? "text-green-700 font-semibold" : ""
+              }`}
             >
               {item.name}
             </Link>
           ))}
-        </div>
-      )}
+          <Link
+            to="/contact"
+            onClick={() => setMenuOpen(false)}
+            className="mt-2 px-3 sm:px-4 py-2 bg-green-700 text-white rounded-md text-sm sm:text-base text-center hover:bg-green-800 transition"
+          >
+            Get Involved
+          </Link>
+        </nav>
+      </div>
     </header>
   );
 }

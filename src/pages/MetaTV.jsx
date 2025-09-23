@@ -15,8 +15,12 @@ function Section({ title, text, img, reverse }) {
     >
       {/* Text */}
       <div className="md:w-1/2">
-        <h4 className="text-2xl font-bold mb-4 text-gray-800">{title}</h4>
-        <p className="text-gray-700 text-base leading-relaxed">{text}</p>
+        <h4 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 text-gray-800">
+          {title}
+        </h4>
+        <p className="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed">
+          {text}
+        </p>
       </div>
 
       {/* Image */}
@@ -25,11 +29,13 @@ function Section({ title, text, img, reverse }) {
           <img
             src={img}
             alt={title}
-            className="w-full h-64 object-cover rounded-lg shadow-md"
+            className="w-full h-48 md:h-64 lg:h-80 object-cover rounded-lg shadow-md"
           />
         ) : (
-          <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center shadow-md">
-            <span className="text-gray-500">[ Image coming soon ]</span>
+          <div className="w-full h-48 md:h-64 lg:h-80 bg-gray-200 rounded-lg flex items-center justify-center shadow-md">
+            <span className="text-gray-500 text-sm md:text-base">
+              [ Image coming soon ]
+            </span>
           </div>
         )}
       </div>
@@ -62,11 +68,14 @@ export default function MetaTV() {
   ];
 
   return (
-    <section id="metatv" className="min-h-screen px-6 py-12 max-w-6xl mx-auto">
-      <h3 className="text-3xl font-bold mb-6 text-center">
+    <section
+      id="metatv"
+      className="min-h-screen px-4 md:px-6 lg:px-12 py-8 md:py-12 max-w-6xl mx-auto"
+    >
+      <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-center">
         MetaTV — Media & Community Engagement
       </h3>
-      <p className="text-gray-700 mb-12 text-center max-w-3xl mx-auto">
+      <p className="text-gray-700 mb-12 text-center max-w-3xl mx-auto text-sm md:text-base lg:text-lg">
         MetaTV is the heartbeat of Avodah Park’s community engagement. It
         connects innovators to society, investors, and global markets through
         storytelling, live broadcasts, and digital training. More than just
@@ -86,8 +95,10 @@ export default function MetaTV() {
 
       {/* Closing */}
       <div className="mt-16 text-center">
-        <h4 className="font-semibold text-xl mb-2">MetaTV’s Promise</h4>
-        <p className="text-gray-600 text-base max-w-2xl mx-auto">
+        <h4 className="font-semibold text-lg md:text-xl lg:text-2xl mb-2">
+          MetaTV’s Promise
+        </h4>
+        <p className="text-gray-600 text-sm md:text-base lg:text-lg max-w-2xl mx-auto">
           By combining media, science, and youth empowerment, MetaTV ensures
           that innovations don’t stay in the lab but reach the community,
           markets, and policymakers — where they can create real impact.

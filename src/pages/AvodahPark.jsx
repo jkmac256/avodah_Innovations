@@ -8,7 +8,7 @@ import Victor_2 from "../assets/images/Victor_2.png";
 import Banana_crisps from "../assets/images/Banana_crisps.png";
 import Avodah_5 from "../assets/images/Avodah_5.png";
 import meta_tv_2 from "../assets/images/meta_tv_2.png";
-import ministry_in_secondary_schools from "../assets/images/ministry_in_secondary_schools.png";
+import family_during_covid from "../assets/images/family_during _covid.png";
 
 function Section({ title, text, img, reverse }) {
   return (
@@ -19,8 +19,12 @@ function Section({ title, text, img, reverse }) {
     >
       {/* Text */}
       <div className="md:w-1/2">
-        <h4 className="text-2xl font-bold mb-4 text-gray-800">{title}</h4>
-        <p className="text-gray-700 text-base leading-relaxed">{text}</p>
+        <h4 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 text-gray-800">
+          {title}
+        </h4>
+        <p className="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed">
+          {text}
+        </p>
       </div>
 
       {/* Image */}
@@ -29,11 +33,13 @@ function Section({ title, text, img, reverse }) {
           <img
             src={img}
             alt={title}
-            className="w-full h-64 object-cover rounded-lg shadow-md"
+            className="w-full h-48 md:h-64 lg:h-80 object-cover rounded-lg shadow-md"
           />
         ) : (
-          <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center shadow-md">
-            <span className="text-gray-500">[ Image coming soon ]</span>
+          <div className="w-full h-48 md:h-64 lg:h-80 bg-gray-200 rounded-lg flex items-center justify-center shadow-md">
+            <span className="text-gray-500 text-sm md:text-base">
+              [ Image coming soon ]
+            </span>
           </div>
         )}
       </div>
@@ -81,7 +87,7 @@ export default function AvodahPark() {
     {
       title: "Community & Wellness Spaces",
       text: "Avodah Park is designed for people, not just research. Cafeterias, wellness centers, and collaborative spaces host hackathons, innovation camps, and youth awards, nurturing creativity, health, and social impact.",
-      img: ministry_in_secondary_schools,
+      img: family_during_covid,
     },
     {
       title: "Computer Centre",
@@ -91,11 +97,11 @@ export default function AvodahPark() {
   ];
 
   return (
-    <section id="park" className="min-h-screen px-6 py-12 max-w-6xl mx-auto">
-      <h3 className="text-3xl font-bold mb-6 text-center">
+    <section id="park" className="min-h-screen px-4 md:px-6 lg:px-12 py-8 md:py-12 max-w-6xl mx-auto">
+      <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-center">
         Avodah Park – Our Home and Hub
       </h3>
-      <p className="text-gray-700 mb-12 text-center max-w-3xl mx-auto">
+      <p className="text-gray-700 mb-12 text-center max-w-3xl mx-auto text-sm md:text-base lg:text-lg">
         Avodah Park is a multi-functional ecosystem owned and managed by Avodah
         Innovations. It integrates research, innovation, training, production, 
         and commercialization under one roof — accelerating the journey from{" "}
@@ -117,8 +123,10 @@ export default function AvodahPark() {
 
       {/* Pipeline */}
       <div className="mt-16 text-center">
-        <h4 className="font-semibold text-xl mb-2">The Avodah Park Pipeline</h4>
-        <p className="text-gray-600 text-base">
+        <h4 className="font-semibold text-lg md:text-xl lg:text-2xl mb-2">
+          The Avodah Park Pipeline
+        </h4>
+        <p className="text-gray-600 text-sm md:text-base lg:text-lg">
           Idea → Research → Validation → Production → Promotion → Community Impact
         </p>
       </div>

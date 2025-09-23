@@ -65,11 +65,11 @@ export default function Contact() {
       <div className="grid md:grid-cols-2 gap-6">
         {/* Office Info */}
         <div className="p-6 bg-white rounded-lg shadow-md">
-          <h4 className="font-semibold text-lg">Head Office</h4>
-          <p className="text-sm text-gray-700">Avodah Innovations Ltd</p>
-          <p className="text-sm text-gray-700">P.O Box 651, Mbarara, Uganda</p>
-          <p className="mt-2 text-sm">📧 Email: avodahug@gmail.com</p>
-          <p className="text-sm">📞 Tel: +256 785 189634</p>
+          <h4 className="font-semibold text-2xl">Head Office</h4>
+          <p className="text-xl text-gray-700"> Avodah Innovations Ltd</p>
+          <p className="text-xl text-gray-700"> 📮 P.O Box 651, Mbarara, Uganda</p>
+          <p className="mt-2 text-xl">📧 Email: avodahug@gmail.com</p>
+          <p className="text-xl">📞 Tel: +256 785 189634</p>
         </div>
 
         {/* Contact Form */}
