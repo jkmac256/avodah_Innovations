@@ -13,6 +13,9 @@ import MetaTV from "./pages/MetaTV";
 import Partners from "./pages/Partners";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
+import Media_kit from "./pages/Media kit";
+import Privacy_Policy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -20,7 +23,7 @@ function AnimatedRoutes() {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        {["/", "/about", "/core-business", "/avodah-park", "/metatv", "/partners", "/contact", "/services"].map((path, i) => {
+        {["/", "/about", "/core-business", "/avodah-park", "/metatv", "/partners", "/contact", "/services", "/media-kit", "/privacy", "/terms"].map((path, i) => {
           const Component = {
             "/": Home,
             "/about": About,
@@ -29,7 +32,10 @@ function AnimatedRoutes() {
             "/metatv": MetaTV,
             "/partners": Partners,
             "/contact": Contact,
-            "/services": Services
+            "/services": Services,
+            "/media-kit": Media_kit,
+            "/privacy": Privacy_Policy,
+            "/terms": Terms
           }[path];
 
           return (
