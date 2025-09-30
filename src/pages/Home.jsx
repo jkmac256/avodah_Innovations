@@ -64,14 +64,14 @@ export default function Home() {
 
       {/* 2. Mission & Impact */}
       <div className="grid gap-6 sm:gap-8 md:grid-cols-4">
+        <Card title="Vision">
+          To drive Africa’s transition toward a green, sustainable economy by turning agro-waste, herbs, and microbes into practical solutions that transform industries, strengthen communities, and inspire future generations.
+        </Card>
         <Card title="Mission">
           Reduce plastic pollution, improve health, add value to agro-residues,
           and create jobs while empowering youth for the bioeconomy. Our mission
           is not only to innovate, but to ensure that innovation builds hope and
           prosperity for communities across Africa.
-        </Card>
-        <Card title="MetaTV">
-          Our media arm for storytelling, training, and investor outreach — developing a national broadcasting platform & app for innovators. With MetaTV, voices that once went unheard are now shaping conversations on science, faith, and entrepreneurship.
         </Card>
         <Card title="Impact">
           Hosted 20–40 young people during COVID-19 lockdowns, training them in

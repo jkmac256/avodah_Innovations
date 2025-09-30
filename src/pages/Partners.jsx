@@ -163,7 +163,7 @@ export default function Partners() {
         </div>
       </div>
 
-      {/* Logos placeholder */}
+      {/* Logos placeholder 
       <div className="text-center mt-12">
         <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4">
           Partner Logos
@@ -186,7 +186,7 @@ export default function Partners() {
           (We’ll add real partner logos here as soon as we finalize the brand
           assets.)
         </p>
-      </div>
+      </div>*/}
     </section>
   );
 }

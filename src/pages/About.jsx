@@ -11,6 +11,10 @@ const aboutData = [
     text: "To drive Africa’s transition toward a green, sustainable economy by turning agro-waste, herbs, and microbes into practical solutions that transform industries, strengthen communities, and inspire future generations.",
   },
   {
+    title: "Mission",
+    text: "Reduce plastic pollution, improve health, add value to agro-residues, and create jobs while empowering youth for the bioeconomy. Our mission is not only to innovate, but to ensure that innovation builds hope and prosperity for communities across Africa."
+  },
+  {
     title: "Values",
     text: "Faith, integrity, excellence, and community — guiding everything we do in science, entrepreneurship, and innovation while ensuring that our work remains impactful and people-centered.",
   },
