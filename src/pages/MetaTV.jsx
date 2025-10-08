@@ -6,7 +6,7 @@ import meta_tv_2 from "../assets/images/meta_tv_2.png";
 import Mentorship from "../assets/images/Mentorship.png";
 import meta_tv_4 from "../assets/images/meta_tv_4.png";
 
-function Section({ title, text, img, reverse }) {
+function Section({ title, text, img, reverse, width, height }) {
   return (
     <div
       className={`flex flex-col md:flex-row ${
@@ -15,24 +15,28 @@ function Section({ title, text, img, reverse }) {
     >
       {/* Text */}
       <div className="md:w-1/2">
-        <h4 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 text-gray-800">
+        <h4 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-800">
           {title}
         </h4>
-        <p className="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed">
+        <p className="text-gray-700 text-xl md:text-2xl lg:text-3xl leading-relaxed">
           {text}
         </p>
       </div>
 
       {/* Image */}
-      <div className="md:w-1/2">
+      <div className="md:w-1/2 flex justify-center">
         {img ? (
           <img
             src={img}
             alt={title}
-            className="w-full h-48 md:h-64 lg:h-80 object-cover rounded-lg shadow-md"
+            style={{ width: width || "100%", height: height || "auto" }}
+            className="object-cover rounded-lg shadow-md"
           />
         ) : (
-          <div className="w-full h-48 md:h-64 lg:h-80 bg-gray-200 rounded-lg flex items-center justify-center shadow-md">
+          <div
+            style={{ width: width || "100%", height: height || "auto" }}
+            className="bg-gray-200 rounded-lg flex items-center justify-center shadow-md"
+          >
             <span className="text-gray-500 text-sm md:text-base">
               [ Image coming soon ]
             </span>
@@ -49,21 +53,29 @@ export default function MetaTV() {
       title: "Our Role",
       text: "MetaTV bridges science and society, giving innovators a platform to share their work. It produces documentaries, feature stories, and training modules that inspire trust in local biotechnology solutions while mobilizing investor support.",
       img: meta_tv,
+      width: "540px",
+      height: "650px",
     },
     {
       title: "Studios & Equipment",
       text: "With over $50,000 invested, MetaTV is equipped with cameras, switchers, mixers, lighting, and editing suites. These facilities allow for professional-quality live broadcasts, educational content, and marketing campaigns.",
       img: meta_tv_2,
+      width: "520px",
+      height: "360px",
     },
     {
       title: "Training & Youth Engagement",
       text: "Beyond broadcasting, MetaTV trains young people in media production, storytelling, and digital marketing. Students, interns, and startups learn how to communicate science and business effectively.",
       img: Mentorship,
+      width: "500px",
+      height: "350px",
     },
     {
       title: "MetaTV App",
       text: "We are building the MetaTV mobile application, designed to bring innovation stories, live shows, and training directly to audiences across Africa. This digital-first approach ensures greater reach and accessibility.",
       img: meta_tv_4,
+      width: "540px",
+      height: "650px",
     },
   ];
 
@@ -72,10 +84,10 @@ export default function MetaTV() {
       id="metatv"
       className="min-h-screen px-4 md:px-6 lg:px-12 py-8 md:py-12 max-w-6xl mx-auto"
     >
-      <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-center">
+      <h3 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-6 text-center">
         MetaTV — Media & Community Engagement
       </h3>
-      <p className="text-gray-700 mb-12 text-center max-w-3xl mx-auto text-sm md:text-base lg:text-lg">
+      <p className="text-gray-700 mb-12 text-center max-w-3xl mx-auto text-base md:text-xl lg:text-2xl">
         MetaTV is the heartbeat of Avodah Park’s community engagement. It
         connects innovators to society, investors, and global markets through
         storytelling, live broadcasts, and digital training. More than just
@@ -90,6 +102,8 @@ export default function MetaTV() {
           text={section.text}
           img={section.img}
           reverse={index % 2 !== 0} // alternate layout
+          width={section.width}
+          height={section.height}
         />
       ))}
 

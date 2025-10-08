@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // Import images
-import Prof_Joel from "../assets/images/Prof_Joel.png";
+import Prof_Joel from "../assets/images/Prof_Joel.jpg";
 import Mentorship from "../assets/images/Mentorship.png";
 import Empowerment from "../assets/images/Empowerment.png";
 
@@ -43,9 +43,9 @@ export default function About() {
       {/* Founder Story */}
       <div className="bg-white shadow-md rounded-lg p-4 sm:p-6 md:p-8 grid md:grid-cols-2 gap-6 items-center">
         <div>
-          <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">Our Founder: Prof. Dr. Joel Bazira</h4>
+          <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">Founder: Prof. Dr. Joel Bazira</h4>
           <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
-            <span className="font-semibold">Prof. Dr. Joel Bazira</span> is a <span className="italic">Medical Doctor (MBChB, MMED, PhD)</span>, an <span className="font-semibold">Associate Professor of Microbiology</span> at MUST, an <span className="font-semibold">innovator and entrepreneur</span>, and the <span className="font-semibold">Senior Pastor</span> of Lift Up Jesus Church, Mbarara. Beyond his professional roles, he is a husband, mentor, and the visionary behind Avodah Innovations, blending science, faith, and leadership to create sustainable change.
+            <span className="font-semibold">Prof. Joel Bazira</span> is a <span className="italic">Medical Doctor (MBChB, MMED, PhD)</span>, an <span className="font-semibold">Associate Professor of Microbiology</span> at MUST, an <span className="font-semibold">innovator and entrepreneur</span>, and the <span className="font-semibold">Senior Pastor</span> of Lift Up Jesus Church, Mbarara. Beyond his professional roles, he is a husband, mentor, and the visionary behind Avodah Innovations, blending science, faith, and leadership to create sustainable change.
           </p>
           <a
             href="https://www.linkedin.com/in/joel-bazira-01549b8b/"
@@ -60,28 +60,11 @@ export default function About() {
           <img
             src={Prof_Joel}
             alt="Founder Prof. Dr. Joel Bazira"
-            className="w-full h-full object-cover rounded-lg shadow-md"
+            className="w-full h-580px object-cover rounded-lg shadow-md"
           />
         </div>
       </div>
            
-      {/* Mentorship & Impact */}
-      <div className="bg-green-50 border-l-4 border-green-700 p-4 sm:p-6 md:p-8 rounded-lg mb-10 grid md:grid-cols-2 gap-6 items-center">
-        <div>
-          <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">Mentorship & Impact</h4>
-          <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
-            For over <span className="font-semibold">24 years</span>, Prof. Dr. Bazira has taught and mentored students at MUST. With <span className="font-semibold">30 years of ministry</span> and over <span className="font-semibold">15 years</span> leading Lift Up Jesus Church, he has invested deeply in Uganda’s youth. During COVID-19 lockdowns, more than <span className="font-semibold">40 young people</span> stayed in his home, receiving mentorship in faith, leadership, and innovation, many launching impactful projects in biotechnology, media, and community transformation.
-          </p>
-        </div>
-        <div className="rounded-lg overflow-hidden h-64 sm:h-80 md:h-[26rem] flex items-center justify-center">
-          <img
-            src={Mentorship}
-            alt="Youth Mentorship at Avodah"
-            className="w-full h-full object-cover rounded-lg shadow-md"
-          />
-        </div>
-      </div>
-
       {/* Biblical Basis */}
       <div className="bg-white shadow-md rounded-lg p-4 sm:p-6 md:p-8 mb-10">
         <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Our Biblical Basis for Innovation</h4>

@@ -3,8 +3,6 @@ import React from "react";
 import Agatha from "../assets/images/Agatha.png";
 import Victor_1 from "../assets/images/Victor_1.png";
 import Victor_2 from "../assets/images/Victor_2.png";
-import Sheila from "../assets/images/Sheila.png";
-import Crochets from "../assets/images/Crochets.png";
 import Athomas from "../assets/images/Athomas.png";
 import Athomas_pdct from "../assets/images/Athomas_pdct.png";
 import robotics from "../assets/images/robotics.png";
@@ -29,12 +27,6 @@ export default function Partners() {
       title: "Mugambe Victor",
       text: `Innovator supported at Avodah Park to transform microbes into biodegradable plastics. Through rigorous research, mentorship, and access to cutting-edge facilities, he has developed sustainable alternatives to conventional packaging. His work is now shaping the future of eco-friendly packaging in Uganda, reducing plastic pollution, creating green jobs, and inspiring a new generation of innovators committed to building a circular bioeconomy.`,
       images: [Victor_1, Victor_2],
-    },
-    {
-      title: "Crochet Youth Group",
-      text: `A youth-led initiative incubated at Avodah Park, turning waste into fashion through creative crochet designs. 
-      They now employ and train other young women in the community.`,
-      images: [Sheila, Crochets],
     },
     {
       title: "Athomas",
@@ -69,10 +61,10 @@ export default function Partners() {
     >
       {/* Intro */}
       <div className="text-center max-w-3xl mx-auto">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-4">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4">
           Our Partners
         </h2>
-        <p className="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed">
+        <p className="text-gray-700 text-xl md:text-2xl lg:text-3xl leading-relaxed">
           Avodah Innovations works with a wide range of partners and customers
           to create sustainable, health-boosting, and future-ready solutions.
           Our collaborations ensure that innovation moves from{" "}
@@ -82,7 +74,7 @@ export default function Partners() {
 
       {/* Categories */}
       <div>
-        <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-6 text-center">
+        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-center">
           Partner Categories
         </h3>
         <div className="grid md:grid-cols-3 gap-6">
@@ -130,10 +122,10 @@ export default function Partners() {
               >
                 {/* Text */}
                 <div className="flex-1">
-                  <h4 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">
+                  <h4 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-2">
                     {story.title}
                   </h4>
-                  <p className="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed">
+                  <p className="text-gray-700 text-xl md:text-2xl lg:text-3xl leading-relaxed">
                     {story.text}
                   </p>
                 </div>

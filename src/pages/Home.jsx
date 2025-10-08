@@ -6,8 +6,7 @@ import logo from "../assets/images/logo.png";
 import meta_tv_3 from "../assets/images/meta_tv_3.png";
 import Victor_1 from "../assets/images/Victor_1.png";
 import Victor_2 from "../assets/images/Victor_2.png";
-import Sheila from "../assets/images/Sheila.png";
-import Crochets from "../assets/images/Crochets.png";
+
 
 // Reusable Card
 function Card({ title, children }) {
@@ -26,11 +25,7 @@ export default function Home() {
       text: "An inspiring innovator who turned microbes into biodegradable plastics — supported by Avodah Park labs, mentorship, and a community of fellow changemakers who believed in his vision.",
       images: [Victor_1, Victor_2],
     },
-    {
-      title: "Crochet Youth Group",
-      text: "A dynamic youth group that creatively transformed waste into fashionable products through Avodah Park incubation. Their journey reflects how passion, skills, and sustainability can merge to create livelihoods and dignity.",
-      images: [Sheila, Crochets],
-    },
+    
   ];
 
   return (
@@ -52,7 +47,7 @@ export default function Home() {
             <a href="/core-business" className="px-6 py-3 bg-green-700 text-white rounded-md text-lg sm:text-xl text-center">
               Our Core Business
             </a>
-            <a href="/avodah-park" className="px-6 py-3 border rounded-md text-lg sm:text-xl text-center">
+            <a href="/services" className="px-6 py-3 border rounded-md text-lg sm:text-xl text-center">
               Avodah Park
             </a>
           </div>
@@ -99,14 +94,13 @@ export default function Home() {
           <Card title="Bioplastics & Polymers">
             Biodegradable alternatives from cassava starch, banana peels, sugarcane bagasse — PHAs, pullulan, xanthan gum, eco-packaging. We aim to lead Africa in providing affordable and sustainable packaging solutions.
           </Card>
-          <Card title="Industrial Enzymes & Fermentation">
-            Enzymes (cellulase, protease, lipase, amylase, phytase) and fermentation products for feed, farming, and industry. These solutions reduce costs, improve efficiency, and unlock opportunities for local industries.
+          <Card title="Drug Discovery & Herbal-Based Innovations">
+            Nutraceuticals, functional foods, and cosmetics from Moringa, Aloe vera, turmeric, and neem. Our herbal solutions integrate traditional wisdom with modern science for global impact. AI-driven drug discovery + CRISPR/LAMP diagnostics for TB, malaria, AMR, and more. By merging technology and medicine, we are developing innovations that save lives and shape the future of healthcare.
           </Card>
-          <Card title="Herbal-Based Innovations">
-            Nutraceuticals, functional foods, and cosmetics from Moringa, Aloe vera, turmeric, and neem. Our herbal solutions integrate traditional wisdom with modern science for global impact.
-          </Card>
-          <Card title="Drug Discovery & Diagnostics">
-            AI-driven drug discovery + CRISPR/LAMP diagnostics for TB, malaria, AMR, and more. By merging technology and medicine, we are developing innovations that save lives and shape the future of healthcare.
+        </div>
+        <div className="gap-6 sm:gap-8 ">
+          <Card title="Rapid Diagnostics">
+            We design LAMP and CRISPR-based point-of-care diagnostics for tuberculosis, AMR pathogens, STIs, fungal infections, malaria, typhoid, and brucellosis. By making diagnostics affordable, accurate, and locally manufacturable, we empower African communities to detect and respond to diseases quickly and effectively.
           </Card>
         </div>
         <div className="text-center mt-6 sm:mt-8">

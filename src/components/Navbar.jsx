@@ -10,11 +10,10 @@ export default function Navbar() {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Core Business", path: "/core-business" },
-    { name: "Avodah Park", path: "/avodah-park" },
+    { name: "Services", path: "/services" },
     { name: "MetaTV", path: "/metatv" },
     { name: "Partners", path: "/partners" },
-    { name: "Services", path: "/services" },
-    { name: "Contact", path: "/contact" },
+        { name: "Contact", path: "/contact" },
   ];
 
   return (
