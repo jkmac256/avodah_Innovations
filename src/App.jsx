@@ -8,7 +8,6 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import CoreBusiness from "./pages/CoreBusiness";
-import AvodahPark from "./pages/AvodahPark";
 import MetaTV from "./pages/MetaTV";
 import Partners from "./pages/Partners";
 import Contact from "./pages/Contact";
@@ -23,12 +22,11 @@ function AnimatedRoutes() {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        {["/", "/about", "/core-business", "/avodah-park", "/metatv", "/partners", "/contact", "/services", "/media-kit", "/privacy", "/terms"].map((path, i) => {
+        {["/", "/about", "/core-business", "/metatv", "/partners", "/contact", "/services", "/media-kit", "/privacy", "/terms"].map((path, i) => {
           const Component = {
             "/": Home,
             "/about": About,
             "/core-business": CoreBusiness,
-            "/avodah-park": AvodahPark,
             "/metatv": MetaTV,
             "/partners": Partners,
             "/contact": Contact,
